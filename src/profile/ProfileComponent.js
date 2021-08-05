@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 const ProfileComponent = ({ fullName, bio, profession, children, alert }) => {
 	return (
@@ -9,6 +10,9 @@ const ProfileComponent = ({ fullName, bio, profession, children, alert }) => {
 			{alert()}
 		</div>
 	);
+};
+ProfileComponent.propTypes = {
+	fullName: PropTypes.string,
 };
 
 export default ProfileComponent;
